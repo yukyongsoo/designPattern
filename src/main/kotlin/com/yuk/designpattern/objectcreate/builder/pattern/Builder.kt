@@ -1,4 +1,4 @@
-package com.yuk.designpattern.builder.pattern
+package com.yuk.designpattern.objectcreate.builder.pattern
 
 object Builder{
     fun build() : BuilderProduct{

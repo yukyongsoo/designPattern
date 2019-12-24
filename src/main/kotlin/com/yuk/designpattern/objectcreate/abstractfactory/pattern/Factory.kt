@@ -1,4 +1,4 @@
-package com.yuk.designpattern.abstractfactory.pattern
+package com.yuk.designpattern.objectcreate.abstractfactory.pattern
 
 interface AbstractCafeFactory {
     fun getProductA() : ProductA

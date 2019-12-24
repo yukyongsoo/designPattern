@@ -1,6 +1,6 @@
-package com.yuk.designpattern.abstractfactory
+package com.yuk.designpattern.objectcreate.abstractfactory
 
-import com.yuk.designpattern.abstractfactory.pattern.*
+import com.yuk.designpattern.objectcreate.abstractfactory.pattern.*
 
 fun useFactory(){
     val factory : AbstractCafeFactory = CafeAFactory()

@@ -1,4 +1,4 @@
-package com.yuk.designpattern.factorymethod.pattern
+package com.yuk.designpattern.objectcreate.factorymethod.pattern
 
 interface Factory {
     fun getProduct() : Product
