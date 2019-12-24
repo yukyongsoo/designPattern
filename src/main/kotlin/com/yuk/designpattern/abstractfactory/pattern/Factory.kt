@@ -7,20 +7,20 @@ interface AbstractCafeFactory {
 
 class CafeAFactory : AbstractCafeFactory {
     override fun getProductA(): ProductA {
-        return ConcreateCafaAProductA()
+        return ConcreateCafeAProductA()
     }
 
     override fun getProductB(): ProductB {
-        return ConcreateCafaAProductB()
+        return ConcreateCafeAProductB()
     }
 }
 
 class CafeBFactory : AbstractCafeFactory {
     override fun getProductA(): ProductA {
-        return ConcreateCafaAProductA()
+        return ConcreateCafeAProductA()
     }
 
     override fun getProductB(): ProductB {
-        return ConcreateCafaAProductB()
+        return ConcreateCafeAProductB()
     }
 }
