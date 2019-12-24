@@ -2,7 +2,7 @@ package com.yuk.designpattern.objectcreate.abstractfactory
 
 import com.yuk.designpattern.objectcreate.abstractfactory.pattern.*
 
-fun useFactory(){
+fun useAbstractFactory(){
     val factory : AbstractCafeFactory = CafeAFactory()
     val productA = factory.getProductA()
 
