@@ -1,7 +1,7 @@
 package com.yuk.designpattern
 
-import com.yuk.designpattern.stracture.composite.useComposite
+import com.yuk.designpattern.stracture.decorator.useDecorator
 
 fun main() {
-    useComposite()
+    useDecorator()
 }
