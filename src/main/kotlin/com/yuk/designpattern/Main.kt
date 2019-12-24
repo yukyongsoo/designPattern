@@ -1,5 +1,7 @@
 package com.yuk.designpattern
 
+import com.yuk.designpattern.stracture.composite.useComposite
+
 fun main() {
-    println("Only Working Test")
+    useComposite()
 }

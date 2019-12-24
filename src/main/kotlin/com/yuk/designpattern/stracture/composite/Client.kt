@@ -1,13 +1,14 @@
 package com.yuk.designpattern.stracture.composite
 
-import com.yuk.designpattern.stracture.composite.pattern.Computer
-import com.yuk.designpattern.stracture.composite.pattern.ConcreateDevice1
-import com.yuk.designpattern.stracture.composite.pattern.ConcreateDevice2
+import com.yuk.designpattern.stracture.composite.pattern.Directory
+import com.yuk.designpattern.stracture.composite.pattern.File
 
 fun useComposite(){
-    val computer = Computer()
-    computer.addDevice(ConcreateDevice1())
-    computer.addDevice(ConcreateDevice2())
+    val directory = Directory()
+    val subDirectory = Directory()
+    subDirectory.addNode(Directory())
+    directory.addNode(subDirectory)
+    directory.addNode(File())
 
-    computer.shutDown()
+    directory.getName()
 }
