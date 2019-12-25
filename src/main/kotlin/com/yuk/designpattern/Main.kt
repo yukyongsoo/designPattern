@@ -1,7 +1,7 @@
 package com.yuk.designpattern
 
-import com.yuk.designpattern.behavior.chainofresponsibility.useCOR
+import com.yuk.designpattern.behavior.command.useCommand
 
 fun main() {
-    useCOR()
+    useCommand()
 }
