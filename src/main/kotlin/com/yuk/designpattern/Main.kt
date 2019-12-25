@@ -1,7 +1,7 @@
 package com.yuk.designpattern
 
-import com.yuk.designpattern.behavior.command.useCommand
+import com.yuk.designpattern.behavior.memento.useMemento
 
 fun main() {
-    useCommand()
+    useMemento()
 }
