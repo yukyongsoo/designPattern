@@ -1,8 +1,7 @@
 package com.yuk.designpattern
 
-import com.yuk.designpattern.behavior.memento.useMemento
-import com.yuk.designpattern.behavior.observer.useObserver
+import com.yuk.designpattern.behavior.strategy.useStrategy
 
 fun main() {
-    useObserver()
+    useStrategy()
 }
