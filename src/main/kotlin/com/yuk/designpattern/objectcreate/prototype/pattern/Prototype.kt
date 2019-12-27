@@ -1,14 +1,18 @@
 package com.yuk.designpattern.objectcreate.prototype.pattern
 
-interface prototype
-
-class ConcreatePrototype : prototype, Cloneable{
-    override fun clone(): Any {
+open class Prototype : Cloneable {
+    public override fun clone(): Any {
         //for your copy method
         return super.clone()
     }
 
-    fun cloneForTypesafe() : prototype{
-        return clone() as prototype
+    fun useProtoType() {
+        println("this is ProtoType object")
+    }
+}
+
+class ConcreateSubPrototype : Prototype() {
+    fun useSubType() {
+        println("this is Copy From ProtoType object")
     }
 }

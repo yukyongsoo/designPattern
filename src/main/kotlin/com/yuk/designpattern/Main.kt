@@ -1,7 +1,16 @@
 package com.yuk.designpattern
 
 import com.yuk.designpattern.behavior.visitor.useVisitor
+import com.yuk.designpattern.objectcreate.abstractfactory.useAbstractFactory
+import com.yuk.designpattern.objectcreate.builder.useBuilder
+import com.yuk.designpattern.objectcreate.factorymethod.pattern.ConcreateFactory
+import com.yuk.designpattern.objectcreate.factorymethod.useFactory
+import com.yuk.designpattern.objectcreate.prototype.usePrototype
 
 fun main() {
-    useVisitor()
+    //useAbstractFactory()
+    //useBuilder()
+    //useFactory(ConcreateFactory())
+    usePrototype()
+    //useVisitor()
 }

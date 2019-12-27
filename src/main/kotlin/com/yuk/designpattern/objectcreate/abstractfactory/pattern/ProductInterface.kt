@@ -1,5 +1,9 @@
 package com.yuk.designpattern.objectcreate.abstractfactory.pattern
 
-interface ProductA
+interface ProductA {
+    fun useProductA()
+}
 
-interface ProductB
+interface ProductB {
+    fun useProductB()
+}

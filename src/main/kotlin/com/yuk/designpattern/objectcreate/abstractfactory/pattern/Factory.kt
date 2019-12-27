@@ -13,14 +13,38 @@ class CafeAFactory : AbstractCafeFactory {
     override fun getProductB(): ProductB {
         return ConcreateCafeAProductB()
     }
+
+    inner class ConcreateCafeAProductA : ProductA {
+        override fun useProductA() {
+            println("use productA for CafeA")
+        }
+    }
+
+    inner class ConcreateCafeAProductB : ProductB {
+        override fun useProductB() {
+            println("use productB for CafeB")
+        }
+    }
 }
 
 class CafeBFactory : AbstractCafeFactory {
     override fun getProductA(): ProductA {
-        return ConcreateCafeAProductA()
+        return ConcreateCafeBProductA()
     }
 
     override fun getProductB(): ProductB {
-        return ConcreateCafeAProductB()
+        return ConcreateCafeBProductB()
+    }
+
+    inner class ConcreateCafeBProductA : ProductA {
+        override fun useProductA() {
+            println("use productA for CafeB")
+        }
+    }
+
+    inner class ConcreateCafeBProductB : ProductB {
+        override fun useProductB() {
+            println("use ProductB for CafeB")
+        }
     }
 }

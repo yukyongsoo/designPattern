@@ -1,5 +1,6 @@
 package com.yuk.designpattern.objectcreate.factorymethod.pattern
 
-interface Product
+interface Product {
+    fun useFactoryMethod()
+}
 
-class ConcreateProduct : Product

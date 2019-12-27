@@ -9,4 +9,9 @@ class ConcreateFactory : Factory{
         return ConcreateProduct()
     }
 
+    private class ConcreateProduct : Product {
+        override fun useFactoryMethod() {
+            println("use Print Method")
+        }
+    }
 }
