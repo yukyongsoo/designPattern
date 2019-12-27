@@ -1,18 +1,29 @@
 package com.yuk.designpattern.behavior.command.pattern
 
 interface Command{
-    fun excute()
+    fun execute() //kill Point
 }
 
-class ACommand(private val command : ACommandImpl) : Command{
-    override fun excute() {
-        command.executeA()
+class ACommand(private val concreateCommand: ConcreateCommand) : Command{
+    override fun execute() {
+        concreateCommand.executeA()
     }
 
 }
 
-class BCommand(private val command : BCommandImpl) : Command{
-    override fun excute() {
-        command.executeB()
+class BCommand(private val concreateCommand: ConcreateCommand) : Command{
+    override fun execute() {
+        concreateCommand.executeB()
+    }
+
+}
+
+class ConcreateCommand {
+    fun executeA(){
+        println("use Command A")
+    }
+
+    fun executeB(){
+        println("use Command B")
     }
 }

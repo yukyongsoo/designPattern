@@ -6,9 +6,9 @@ abstract class NavigatorExtender(private val navigator: Navigator) : Navigator{
     }
 }
 
-class ConcreateNavigatorExtender1(private val navigator: Navigator) : NavigatorExtender(navigator){
+class ConcreateNavigatorExtender1(navigator: Navigator) : NavigatorExtender(navigator){
     override fun display() {
-        super.display()
+        super.display() //kill point
         subDisplay()
     }
 
@@ -18,11 +18,10 @@ class ConcreateNavigatorExtender1(private val navigator: Navigator) : NavigatorE
 }
 
 
-class ConcreateNavigatorExtender2(private val navigator: Navigator) : NavigatorExtender(navigator){
+class ConcreateNavigatorExtender2(navigator: Navigator) : NavigatorExtender(navigator){
     override fun display() {
-        super.display()
+        super.display() //kill point
         subDisplay()
-
     }
 
     private fun subDisplay(){

@@ -5,9 +5,10 @@ interface Adapter {
 }
 
 class ConcreateAdapter(
-    private val adaptee: AdapteeForOldClass) : Adapter {
+    private val adaptee: AdapteeForOldClass
+) : Adapter {
 
     override fun request() {
-       adaptee.toString()
+        adaptee.toString()
     }
 }

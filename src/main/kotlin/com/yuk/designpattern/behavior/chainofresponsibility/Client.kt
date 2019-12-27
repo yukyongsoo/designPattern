@@ -13,4 +13,6 @@ fun useCOR(){
     firstHandler.handle(1)
     firstHandler.handle(2)
     firstHandler.handle(3)
+    firstHandler.handle(4)
+
 }

@@ -8,46 +8,46 @@ abstract class Handler {
         this.next = next
     }
 
-    fun handle(number: Int) {
+    fun handle(number: Int) { //kill point
         when {
-            resolve(number) -> done(number)
+            checkHandleAvailable(number) -> resolve(number)
             next != null -> next?.handle(number)
             else -> println("어떤 객체도 처리하지 못함")
         }
     }
 
-    abstract fun resolve(num: Int): Boolean
-    abstract fun done(num: Int)
+    protected abstract fun checkHandleAvailable(num: Int): Boolean
+    protected abstract fun resolve(num: Int)
 }
 
 class ConcreateHandler1 : Handler() {
-    override fun resolve(num: Int): Boolean {
+    override fun checkHandleAvailable(num: Int): Boolean {
         return num == 1
     }
 
-    override fun done(num: Int) {
+    override fun resolve(num: Int) {
         println("handler1 work")
     }
 }
 
 
 class ConcreateHandler2 : Handler() {
-    override fun resolve(num: Int): Boolean {
+    override fun checkHandleAvailable(num: Int): Boolean {
         return num == 2
     }
 
-    override fun done(num: Int) {
+    override fun resolve(num: Int) {
         println("handler2 work")
     }
 }
 
 
 class ConcreateHandler3 : Handler() {
-    override fun resolve(num: Int): Boolean {
+    override fun checkHandleAvailable(num: Int): Boolean {
         return num == 3
     }
 
-    override fun done(num: Int) {
+    override fun resolve(num: Int) {
         println("handler3 work")
     }
 }
