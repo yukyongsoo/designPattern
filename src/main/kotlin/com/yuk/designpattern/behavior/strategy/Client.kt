@@ -5,9 +5,7 @@ import com.yuk.designpattern.behavior.strategy.pattern.ConcreateStrategy2
 import com.yuk.designpattern.behavior.strategy.pattern.StrategyContext
 
 fun useStrategy(){
-    val context = StrategyContext()
-
-    context.setStrategy(ConcreateStrategy1())
+    val context = StrategyContext(ConcreateStrategy1())
     context.getStrategy().useMethod()
 
     context.setStrategy(ConcreateStrategy2())

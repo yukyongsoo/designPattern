@@ -2,6 +2,7 @@ package com.yuk.designpattern
 
 import com.yuk.designpattern.behavior.chainofresponsibility.useCOR
 import com.yuk.designpattern.behavior.command.useCommand
+import com.yuk.designpattern.behavior.memento.useMemento
 import com.yuk.designpattern.behavior.visitor.useVisitor
 import com.yuk.designpattern.objectcreate.abstractfactory.useAbstractFactory
 import com.yuk.designpattern.objectcreate.builder.useBuilder
@@ -15,6 +16,7 @@ fun main() {
     //useFactory(ConcreateFactory())
     //usePrototype()
     //useCOR()
-    useCommand()
+    //useCommand()
+    useMemento()
     //useVisitor()
 }

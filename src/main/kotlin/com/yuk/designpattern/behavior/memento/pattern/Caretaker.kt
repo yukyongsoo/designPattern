@@ -1,15 +1,13 @@
 package com.yuk.designpattern.behavior.memento.pattern
 
-import com.yuk.designpattern.behavior.memento.MementoTarget
+import java.util.*
 
 class Caretaker {
-    private val savedStates  = mutableListOf<Originator.Memento>()
+    private val savedStates  = Stack<Originator.Memento>()
 
-    fun setState(mementoTarget: MementoTarget){
-        val originator = Originator()
-        originator.setState(mementoTarget.clone() as MementoTarget)
-        savedStates.add(originator.saveToMemento())
+    fun setState(memento: Originator.Memento){
+        savedStates.push(memento)
     }
 
-    fun getLastState() = savedStates.last().getState()
+    fun getLastState() = savedStates.pop() ?: throw IllegalStateException("caretaker has not memento")
 }

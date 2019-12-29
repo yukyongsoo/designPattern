@@ -1,23 +1,15 @@
 package com.yuk.designpattern.behavior.memento.pattern
 
 import com.yuk.designpattern.behavior.memento.MementoTarget
-import com.yuk.designpattern.behavior.memento.pattern.Originator.Memento
 
 
-
-class Originator{
-    private var state : MementoTarget? = null
-
+class Originator(private var state : MementoTarget){
     fun setState(state: MementoTarget) {
         this.state = state
     }
 
     fun saveToMemento(): Memento {
-        return Memento(this.state!!)
-    }
-
-    fun restoreFromMemento(memento: Memento) {
-        this.state = memento.getState()
+        return Memento(this.state.clone() as MementoTarget)
     }
 
     class Memento(private val mementoTarget: MementoTarget) {

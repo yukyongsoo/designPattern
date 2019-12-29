@@ -1,16 +1,23 @@
 package com.yuk.designpattern.behavior.memento
 
 import com.yuk.designpattern.behavior.memento.pattern.Caretaker
+import com.yuk.designpattern.behavior.memento.pattern.Originator
 
 fun useMemento(){
     val caretaker = Caretaker()
-
     val target = MementoTarget("target1")
-    caretaker.setState(target)
-    target.print()
+    val originator = Originator(target)
+    caretaker.setState(originator.saveToMemento())
 
     target.target = "target2"
+    caretaker.setState(originator.saveToMemento())
+
+    target.target = "target3"
     target.print()
 
-    caretaker.getLastState().print()
+    var memento  = caretaker.getLastState()
+    memento.getState().print()
+
+    memento = caretaker.getLastState()
+    memento.getState().print()
 }
