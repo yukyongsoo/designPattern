@@ -7,8 +7,12 @@ interface Handler<I, O> {
 class Pipeline<I, O>(
     private val currentHandler: Handler<I, O>
 ) {
-    fun <K> addHandler(newHandler: Handler<O, K>): Pipeline<O, K> {
-        return Pipeline({ input -> newHandler.handle(currentHandler.handle(input)) })
+    fun <K> addHandler(newHandler: Handler<O, K>): Pipeline<I, K> {
+        return Pipeline(object : Handler<I, K> {
+            override fun handle(input: I): K {
+                return newHandler.handle(currentHandler.handle(input))
+            }
+        })
     }
 
     fun execute(input: I): O {
