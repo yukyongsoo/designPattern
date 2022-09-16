@@ -19,3 +19,17 @@ class Pipeline<I, O>(
         return currentHandler.handle(input)
     }
 }
+
+class FunctionPipeline<I, O>(
+    private val currentHandler: (I) -> O
+) {
+    fun <K> addHandler(newHandler: (O) -> K): FunctionPipeline<I, K> {
+        return FunctionPipeline { input ->
+            newHandler.invoke(currentHandler.invoke(input))
+        }
+    }
+
+    fun execute(input: I): O {
+        return currentHandler.invoke(input)
+    }
+}
