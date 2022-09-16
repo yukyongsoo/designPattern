@@ -6,6 +6,7 @@ import com.yuk.designpattern.behavior.memento.useMemento
 import com.yuk.designpattern.behavior.pipeline.useFunctionPipeline
 import com.yuk.designpattern.behavior.pipeline.usePipeline
 import com.yuk.designpattern.behavior.visitor.useVisitor
+import com.yuk.designpattern.concurrency.balking.useBalking
 import com.yuk.designpattern.objectcreate.abstractfactory.useAbstractFactory
 import com.yuk.designpattern.objectcreate.builder.useBuilder
 import com.yuk.designpattern.objectcreate.factorymethod.pattern.ConcreateFactory
@@ -21,6 +22,7 @@ fun main() {
     //useCommand()
     //useMemento()
     //useVisitor()
-    usePipeline()
-    useFunctionPipeline()
+    //usePipeline()
+    //useFunctionPipeline()
+    useBalking()
 }
