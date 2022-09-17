@@ -1,4 +1,4 @@
-package com.yuk.designpattern.stracture.adapter.pattern
+package com.yuk.designpattern.structure.adapter.pattern
 
 interface Adapter {
     fun request()

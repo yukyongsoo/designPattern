@@ -1,4 +1,4 @@
-package com.yuk.designpattern.stracture.composite.pattern
+package com.yuk.designpattern.structure.composite.pattern
 
 interface Node {
     fun addNode(node: Node)

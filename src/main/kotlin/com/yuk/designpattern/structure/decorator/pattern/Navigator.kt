@@ -1,4 +1,4 @@
-package com.yuk.designpattern.stracture.decorator.pattern
+package com.yuk.designpattern.structure.decorator.pattern
 
 interface Navigator{
     fun display()

@@ -1,4 +1,4 @@
-package com.yuk.designpattern.stracture.decorator.pattern
+package com.yuk.designpattern.structure.decorator.pattern
 
 abstract class NavigatorExtender(private val navigator: Navigator) : Navigator{
     override fun display() {

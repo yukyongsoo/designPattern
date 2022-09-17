@@ -1,7 +1,7 @@
-package com.yuk.designpattern.stracture.composite
+package com.yuk.designpattern.structure.composite
 
-import com.yuk.designpattern.stracture.composite.pattern.Directory
-import com.yuk.designpattern.stracture.composite.pattern.File
+import com.yuk.designpattern.structure.composite.pattern.Directory
+import com.yuk.designpattern.structure.composite.pattern.File
 
 fun useComposite(){
     val directory = Directory()

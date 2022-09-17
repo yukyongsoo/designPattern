@@ -1,4 +1,4 @@
-package com.yuk.designpattern.stracture.proxy.pattern
+package com.yuk.designpattern.structure.proxy.pattern
 
 interface Proxy{
     fun proxyFunction()
